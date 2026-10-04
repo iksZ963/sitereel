@@ -1,0 +1,37 @@
+{
+  "name": "sitereel",
+  "version": "0.2.0",
+  "description": "Record a polished, fully automated demo video of any website with one command.",
+  "type": "module",
+  "bin": {
+    "sitereel": "bin/sitereel.mjs"
+  },
+  "main": "src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "demo",
+    "video",
+    "screen-recording",
+    "playwright",
+    "website",
+    "automation",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.49.0"
+  },
+  "optionalDependencies": {
+    "ffmpeg-static": "^5.2.0"
+  }
+}
