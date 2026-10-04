@@ -12,7 +12,7 @@ export async function doctor(cfg = {}) {
   add(hasChromium(), 'Chromium browser', 'Not installed yet. It is downloaded automatically on the first run (or: npx playwright install chromium).');
 
   const ff = await findFfmpeg();
-  add(!!ff, ff ? `ffmpeg (${ff.source})` : 'ffmpeg', 'Needed for .mp4 output. Reinstall sitereel to fetch the bundled one, or install ffmpeg yourself. You still get a .webm without it.');
+  add(!!ff, ff ? `ffmpeg (${ff.source})` : 'ffmpeg', 'Needed for .mp4 output. It is downloaded automatically the first time you record, or install ffmpeg yourself. You still get a .webm without it.');
 
   try {
     const plan = detectPlan(process.cwd(), cfg);

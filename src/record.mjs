@@ -173,6 +173,7 @@ export async function record(userOpts = {}) {
   try {
     console.log('sitereel: press Ctrl+C to cancel.\n');
     ensureChromium();
+    if (cfg.mp4 && !cfg.preview) await findFfmpeg({ install: true });
 
     let base = cfg.url;
     if (base) {

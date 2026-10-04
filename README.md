@@ -96,5 +96,5 @@ Helpers: `sleep`, `smoothScroll(px)`, `scrollThrough({ screens, pause })`, `scro
 - **Next.js + `next dev`:** building while the dev server is running can clash over `.next`. Stop the dev server, or record it with `--url http://localhost:3000`. If your `next.config.js` has `distDir: process.env.NEXT_DIST_DIR || '.next'`, sitereel builds into `.next-demo` and never clashes.
 - **Video quality:** Playwright's recorder compresses fairly hard. Fine for demos; it won't be pixel-perfect.
 - **Images from the internet** (CDNs, Unsplash) need a connection while recording.
-- **ffmpeg** is bundled (via `ffmpeg-static`). If it can't be downloaded, sitereel uses a system ffmpeg when there is one; otherwise you still get the `.webm`. `sitereel doctor` tells you which.
+- **ffmpeg** is bundled (via `ffmpeg-static`) and downloaded automatically the first time you record, even if your npm blocks dependency install scripts. If that download fails, sitereel uses a system ffmpeg when there is one; otherwise you still get the `.webm`. `sitereel doctor` tells you which.
 - **Requires** Node 18+.
